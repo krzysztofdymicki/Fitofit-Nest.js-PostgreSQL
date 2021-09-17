@@ -1,0 +1,49 @@
+### --------------- USERS ----------------- ###
+
+
+### GET ALL USERS
+
+GET http://localhost:3001/users
+Content-Type: application/json
+
+### SIGN IN
+
+POST http://localhost:3001/users/signin
+Content-Type: application/json
+
+{
+    "username": "12345678",
+    "password": "12345678" 
+}
+
+### SIGN UP
+
+POST http://localhost:3001/users/signup
+Content-Type: application/json
+
+{
+    "username": "testuser6",
+    "password": "testpassword"
+}
+
+
+### ------------------- ACTIVITIES ------------------------ ###
+
+### GET USER'S ACTIVITIES
+
+GET http://localhost:3001/activities/my
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VybmFtZSI6IjEyMzQ1Njc4IiwicGFzc3dvcmRfaGFzaCI6IiQyYiQxMCR3WkNFVEQxTHdwMVRpQzNJTVVnVVllOUpYTFJ6VjQuMFpaVXRJeE5GZENObFdoTjcvMlZMRyIsImlhdCI6MTYzMTg5NzY0OX0.2uvDtSc2xymWUEAXlbQUkyJeQRckL3pSi_I-YndkTW0
+
+
+### ADD NEW ACTIVITY
+
+POST http://localhost:3001/activities
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InRlc3R1c2VyNSIsInBhc3N3b3JkX2hhc2giOiIkMmIkMTAkdzhza3JBSXdzdHhIaDlLYm1iMmd0LlVSWmJBQU1aMG14ODNjSmZlVlB6bm1acldGNU5UMHkiLCJpYXQiOjE2MzE4MDIzNTV9.ZAqe7IH5MfBJlDLb7ZGK7SFTLXaCL6W6qN4BOpMigKw
+
+{
+    "start": "Lublin",
+    "end": "Warszawa",
+    "date": "September 17, 2021 03:24:00"
+}
