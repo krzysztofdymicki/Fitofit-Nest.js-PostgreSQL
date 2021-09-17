@@ -10,5 +10,12 @@ export declare class ActivitiesService {
     private returnLocationIQUrl;
     private getCoordinates;
     private calculateDistance;
-    addActivity(user_id: number, activityFromRequest: AddActivityDto): Promise<Activity>;
+    addActivity(user_id: number, activityFromRequest: AddActivityDto): Promise<{
+        id: number;
+        start: string;
+        end: string;
+        date: Date;
+        distance: number;
+        user_id: number;
+    }>;
 }

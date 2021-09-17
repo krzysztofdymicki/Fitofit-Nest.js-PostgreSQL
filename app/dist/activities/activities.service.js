@@ -93,7 +93,14 @@ let ActivitiesService = class ActivitiesService {
             user_id,
         });
         const savedActivity = await this.repo.save(newActivity);
-        return savedActivity;
+        return {
+            id: savedActivity.activity_id,
+            start: savedActivity.activity_start,
+            end: savedActivity.activity_end,
+            date: savedActivity.activity_date,
+            distance: savedActivity.activity_distance,
+            user_id: savedActivity.user_id,
+        };
     }
 };
 ActivitiesService = __decorate([
